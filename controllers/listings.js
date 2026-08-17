@@ -1,10 +1,25 @@
 const Listing = require("../models/listing");
 
-module.exports.index =  async (req,res) => {
-    const allListings = await Listing.find({});
-    res.render("listings/index.ejs",{allListings});//browser me data
+// module.exports.index =  async (req,res) => {
+//     const allListings = await Listing.find({});
+//     res.render("listings/index.ejs",{allListings});//browser me data
     
-    };
+//     };
+module.exports.index = async (req, res) => {
+    const { category } = req.query;
+
+    let allListings;
+
+    if (category) {
+        allListings = await Listing.find({ category: category });
+    } else {
+        allListings = await Listing.find({});
+    }
+    console.log("CATEGORY:", category);
+    console.log("TOTAL LISTINGS:", allListings.length);
+
+    res.render("listings/index.ejs", { allListings });
+};
 
 module.exports.renderNewForm = (req,res) => {
    res.render("listings/new.ejs");
@@ -56,6 +71,7 @@ module.exports.renderEditForm = async (req,res) => {
 };
 
 module.exports.updateListing = async (req,res) => {
+    
     let {id} = req.params;
     let listing =await Listing.findByIdAndUpdate(id, {...req.body.listing});
     if(typeof req.file != "undefined"){

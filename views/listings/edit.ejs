@@ -82,6 +82,61 @@
             required>
             <div class="invalid-feedback">Please enter a location</div>
         </div>
+        <div class="mb-3">
+    <label for="category" class="form-label">Category</label>
+
+    <select 
+        name="listing[category]" 
+        id="category" 
+        class="form-select"
+        required>
+
+        <option value="Rooms" <%= listing.category === "Rooms" ? "selected" : "" %>>
+            Rooms
+        </option>
+
+        <option value="Iconic Cities" <%= listing.category === "Iconic Cities" ? "selected" : "" %>>
+            Iconic Cities
+        </option>
+
+        <option value="Mountains" <%= listing.category === "Mountains" ? "selected" : "" %>>
+            Mountains
+        </option>
+
+        <option value="Castles" <%= listing.category === "Castles" ? "selected" : "" %>>
+            Castles
+        </option>
+
+        <option value="Arctic" <%= listing.category === "Arctic" ? "selected" : "" %>>
+            Arctic
+        </option>
+
+        <option value="Camping" <%= listing.category === "Camping" ? "selected" : "" %>>
+            Camping
+        </option>
+
+        <option value="Farms" <%= listing.category === "Farms" ? "selected" : "" %>>
+            Farms
+        </option>
+
+        <option value="Family" <%= listing.category === "Family" ? "selected" : "" %>>
+            Family
+        </option>
+
+        <option value="Restaurants" <%= listing.category === "Restaurants" ? "selected" : "" %>>
+            Restaurants
+        </option>
+
+        <option value="National Parks" <%= listing.category === "National Parks" ? "selected" : "" %>>
+            National Parks
+        </option>
+
+    </select>
+
+    <div class="invalid-feedback">
+        Please select a category
+    </div>
+</div>
         
         <button class="btn btn-dark edit-btn mt-3">Edit</button>
     </form>

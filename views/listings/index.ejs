@@ -7,12 +7,14 @@
         flex-wrap: wrap;
         align-items: center;
     }
-    .filter{
-        text-align: center;
-        margin-right: 2rem;
-        margin-top: 2rem;
-        opacity: 0.7;
-    }
+    .filter {
+    text-align: center;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    opacity: 0.7;
+    text-decoration: none;
+    color: black;
+}
 
     .filter:hover{
         opacity: 1;
@@ -37,6 +39,8 @@
     display: flex;
     align-items: center;
     }
+    
+
 </style>
 
 <div id="filters">
@@ -44,50 +48,46 @@
         <div><i class="fa-solid fa-fire"></i></div>
         <p>Trending</p>
     </div>
-     <div class="filter">
-        <div><i class="fa-solid fa-bed"></i></i></div>
+    <a href="/listings?category=Rooms" class="filter">
+        <div><i class="fa-solid fa-bed"></i></div>
         <p>Rooms</p>
-    </div>
-    <div class="filter">
-        <div><i class="fa-solid fa-mountain-city"></i></i></div>
+    </a>
+    <a href="/listings?category=Iconic%20Cities" class="filter">
+        <div><i class="fa-solid fa-mountain-city"></i></div>
         <p>Iconic Cities</p>
-    </div>
-    <div class="filter">
-        <div><i class="fa-solid fa-mountain-sun"></i></i></div>
+    </a>
+    <a href="/listings?category=Mountains" class="filter">
+        <div><i class="fa-solid fa-mountain-sun"></i></div>
         <p>Mountains</p>
-    </div>
-    <div class="filter">
-        <div><i class="fa-brands fa-fort-awesome"></i></i></div>
+    </a>
+    <a href="/listings?category=Castles" class="filter">
+        <div><i class="fa-brands fa-fort-awesome"></i></div>
         <p>Castles</p>
-    </div>
-    <div class="filter">
-        <div><i class="fa-solid fa-snowman"></i></i></div>
+    </a>
+    <a href="/listings?category=Arctic" class="filter">
+        <div><i class="fa-solid fa-snowman"></i></div>
         <p>Arctic</p>
-    </div>
-    <div class="filter">
-        <div><i class="fa-solid fa-tent-arrow-turn-left"></i></i></div>
-        <p>Camping</p>
-    </div>
-    <div class="filter">
-        <div><i class="fa-solid fa-tractor"></i></i></div>
-        <p>Farms</p>
-    </div>
-    <div class="filter">
-        <div><i class="fa-solid fa-crown"></i></i></div>
-        <p>Luxury</p>
-    </div>
-    <div class="filter">
-        <div><i class="fa-solid fa-hand-holding-dollar"></i></i></div>
-        <p>Budget</p>
-    </div>
-    <div class="filter">
-        <div><i class="fa-solid fa-people-group"></i></i></div>
-        <p>Family</p>
-    </div>
-    <div class="filter">
-        <div><i class="fa-solid fa-square-parking"></i></i></div>
-        <p>National Parks</p>
-    </div>
+    </a>
+    <a href="/listings?category=Camping" class="filter">
+    <div><i class="fa-solid fa-tent-arrow-turn-left"></i></div>
+    <p>Camping</p>
+</a>
+    <a href="/listings?category=Farms" class="filter">
+    <div><i class="fa-solid fa-tractor"></i></div>
+    <p>Farms</p>
+</a>
+    <a href="/listings?category=Family" class="filter">
+    <div><i class="fa-solid fa-people-group"></i></div>
+    <p>Family</p>
+</a>
+   <a href="/listings?category=Restaurants" class="filter">
+    <div><i class="fa-solid fa-utensils"></i></div>
+    <p>Restaurants</p>
+</a>
+ <a href="/listings?category=National%20Parks" class="filter">
+    <div><i class="fa-solid fa-square-parking"></i></div>
+    <p>National Parks</p>
+</a> 
     
     
 
