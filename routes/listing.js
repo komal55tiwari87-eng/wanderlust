@@ -15,27 +15,36 @@ router
     isLoggedIn,
     validateListing,
     upload.single("image"),
-    
     wrapAsync(listingController.createListing)
 );
 
 //new route
-router.get("/new", isLoggedIn,listingController.renderNewForm);
+router.get(
+    "/new", 
+    isLoggedIn,
+    listingController.renderNewForm);
+
+//edit route
+router.get("/:id/edit",isLoggedIn, isOwner,
+    wrapAsync(listingController.renderEditForm));
+
 
 router.route("/:id")
 .get(
     wrapAsync(listingController.showListing))
 .put(
-    isLoggedIn,isOwner,upload.single("image"),validateListing,
+    isLoggedIn,
+    isOwner,
+    upload.single("image"),
+    validateListing,
     wrapAsync(listingController.updateListing))
 .delete(
-    isLoggedIn,isOwner, 
+    isLoggedIn,
+    isOwner, 
     wrapAsync(listingController.destroyListing));
 
 
-//edit route
-router.get("/:id/edit",isLoggedIn, isOwner,
-    wrapAsync(listingController.renderEditForm));
+
 
 
 module.exports = router;

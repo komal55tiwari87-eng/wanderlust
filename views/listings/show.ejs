@@ -12,7 +12,9 @@
         class="card-img-top show-img" 
         alt="listing_image">
         <div class="card-body">
-        <p class="card-text">Owned by<i><%= listing.owner.username %></i></p>
+        <p class="card-text">
+            Owned by <i><%= listing.owner ? listing.owner.username : "Wanderlust User" %></i>
+        </p>
         <br>
            <p class="card-text"><%= listing.description %></p>
            <p class="card-text">&#8377;<%= listing.price.toLocaleString("en-IN") %></p>
@@ -25,7 +27,7 @@
 
    
 </div>
-<% if(currUser && listing.owner._id.equals(currUser._id)) { %>
+<% if(currUser && listing.owner && listing.owner._id.equals(currUser._id)) { %>
 <div class="btns">
     <a href="/listings/<%= listing.id %>/edit" 
         class="btn btn-dark col-2 offset-3 edit-btn">
