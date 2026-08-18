@@ -114,4 +114,123 @@ body {
     padding-left: 0;
     padding-right: 0;
 }
+/* =========================
+   DARK MODE
+========================= */
 
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Navbar */
+
+body.dark-mode .navbar {
+    background-color: #1c1c1c !important;
+}
+
+body.dark-mode .nav-link,
+body.dark-mode .navbar-brand {
+    color: #ffffff !important;
+}
+
+/* Trending / Categories */
+
+body.dark-mode .filter {
+    color: #ffffff !important;
+}
+
+body.dark-mode a.filter {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+body.dark-mode .filter p {
+    color: #ffffff !important;
+}
+
+body.dark-mode .filter i {
+    color: #ffffff !important;
+}
+
+body.dark-mode a.filter:hover,
+body.dark-mode a.filter:hover p,
+body.dark-mode a.filter:hover i {
+    color: #fe424b !important;
+}
+
+/* Tax Toggle */
+
+body.dark-mode .tax-toggle {
+    color: #ffffff;
+    border-color: #555 !important;
+}
+
+body.dark-mode .tax-toggle .form-check-label {
+    color: #ffffff !important;
+}
+
+/* Cards */
+
+body.dark-mode .card,
+body.dark-mode .listing-card {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #333 !important;
+}
+
+body.dark-mode .card-title,
+body.dark-mode .card-text {
+    color: #ffffff !important;
+}
+
+body.dark-mode .listing-link {
+    color: #ffffff !important;
+}
+
+/* Forms */
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background-color: #222222 !important;
+    color: #ffffff !important;
+    border-color: #555555 !important;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #aaaaaa !important;
+}
+
+/* Footer */
+
+body.dark-mode .f-info {
+    background-color: #1c1c1c !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .f-info-links a {
+    color: #ffffff !important;
+}
+
+body.dark-mode .f-info-brand,
+body.dark-mode .f-info-socials {
+    color: #ffffff !important;
+}
+
+body.dark-mode .f-info-socials i {
+    color: #ffffff !important;
+}
+
+/* Show Page */
+
+body.dark-mode .show-card {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+}
+
+/* Buttons */
+
+body.dark-mode .btn-outline-secondary {
+    color: #ffffff;
+    border-color: #777777;
+}
